@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    .yes:hover {
+      background-color: #e63950;
+    }
+
+    .no {
+      background-color: #ddd;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Ms. Dua, will you go out on a dinner date with me? ❤️</h1>
+  
+  <button class="yes" onclick="goToWhatsApp()">Yes 😍</button>
+  <button class="no" id="noBtn" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<script>
+function goToWhatsApp() {
+  // Replace with your number
+  window.location.href = "https://wa.me/923322202817?text=I%20said%20YES%20❤️";
+}
+
+function moveNo() {
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random() * 400 + "px";
+  btn.style.left = Math.random() * 400 + "px";
+}
+</script>
+
+</body>
+</html>
